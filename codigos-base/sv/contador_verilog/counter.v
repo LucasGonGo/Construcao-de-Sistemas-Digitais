@@ -9,7 +9,7 @@ module count #(
 	reg [COUNT_WIDTH - 1:0] count_reg;
 	reg next_i_dly;
 
-	always @(posedge clk_i, posedge rstn_i) begin
+	always @(posedge clk_i, negedge rstn_i) begin
 		if (rstn_i == 1'b0) begin
 			count_reg <= {(COUNT_WIDTH){1'b0}};
 			next_i_dly <= 1'b0;

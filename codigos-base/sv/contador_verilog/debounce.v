@@ -13,7 +13,7 @@ module debounce #(
 	reg intclock;
 	reg [23:0] clockdiv;
 
-	always @(posedge clk_i, posedge rstn_i) begin
+	always @(posedge clk_i, negedge rstn_i) begin
 		if (rstn_i == 1'b0) begin
 			state <= state1;
 		end else begin
@@ -59,7 +59,7 @@ module debounce #(
 		end
 	end
 
-	always @(posedge clk_i, posedge rstn_i) begin
+	always @(posedge clk_i, negedge rstn_i) begin
 		if (rstn_i == 1'b0) begin
 			clockdiv <= {24{1'b0}};
 			intclock <= 1'b0;
