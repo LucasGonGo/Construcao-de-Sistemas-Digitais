@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module top_tb #(
-	parameter [31:0] COUNT_WIDTH = 8,
+	parameter [31:0] COUNT_WIDTH = 16,
 	parameter [31:0] DEB_DELAY = 250,
 	parameter [31:0] HALF_MS_COUNT = 5
 ) ();

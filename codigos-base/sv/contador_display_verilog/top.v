@@ -14,7 +14,7 @@ module top_counter
 	output wire [7:0] dspl_an
 );
 
-	parameter [31:0] COUNT_WIDTH=8;
+	parameter [31:0] COUNT_WIDTH=16;
 	parameter [31:0] DEB_DELAY=1000000;
 	parameter [31:0] HALF_MS_COUNT=50000;
 
@@ -44,8 +44,8 @@ module top_counter
 
 	assign dp1 = {1'b1,count[3:0],1'b1};
 	assign dp2 = {1'b1,count[7:4],1'b1};
-	assign dp3 = {6{1'b0}};
-	assign dp4 = {6{1'b0}};
+	assign dp3 = {1'b1,count[11:8],1'b1};
+	assign dp4 = {1'b1,count[15:12],1'b1};
 	assign dp5 = {6{1'b0}};
 	assign dp6 = {6{1'b0}};
 	assign dp7 = {6{1'b0}};

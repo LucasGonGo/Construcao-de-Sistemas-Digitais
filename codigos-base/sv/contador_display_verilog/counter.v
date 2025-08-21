@@ -1,5 +1,5 @@
 module count #(
-	parameter [31:0] COUNT_WIDTH = 8
+	parameter [31:0] COUNT_WIDTH = 16
 ) (
 	input wire clk_i,
 	input wire rstn_i,
